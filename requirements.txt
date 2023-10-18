@@ -1,0 +1,9 @@
+torch
+lightning
+transformers
+datasets
+evaluate
+tensorboard
+six
+nltk
+rouge_score
