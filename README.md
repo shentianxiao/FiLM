@@ -3,10 +3,12 @@
 This repo contains the code for the Fill-in Language Model (FiLM) described in the paper [FiLM: Fill-in Language Models for Any Order Generation](http://arxiv.org/abs/2310.09930) (Shen et al., 2023).
 
 FiLM is an any-order language model that can fill text in the middle:
-> Depression, <ins>loneliness</ins> and stress increase <ins>the risk of, say,</ins> drug abuse. 
+> Depression, <ins>loneliness</ins> and stress increase <ins>the risk of, say,</ins> drug abuse.
+
 > I tried going to the park the other day. The weather seemed nice enough for a walk. <ins>However, when I got there I started to itch.</ins> My eyes were watery and it was hard to breathe. My allergies were too bad and I had to go back home.
 
 Its training extends the masked language modeling objective by adopting varying mask probabilities sampled from the Beta distribution to enhance the generative capabilities. At decoding time, FiLM can start with either a sequence entirely of masks or a partially complete text interspersed with masks, and it progressively replaces one mask with a predicted token at each step.
+
 <img src="figs/model.jpeg" alt="model illustration" style="width:100%; height:auto;"/>
 
 ## Install dependencies
